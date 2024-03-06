@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Finance Manager</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Personal Finance Manager</h1>
+    </header>
+    <main>
+        <section id="budget-tracker">
+            <h2>Budget Tracker</h2>
+            <form id="expense-form">
+                <label for="amount">Amount:</label>
+                <input type="number" id="amount" name="amount" required>
+                <label for="category">Category:</label>
+                <select id="category" name="category">
+                    <option value="food">Food</option>
+                    <option value="transport">Transport</option>
+                    <option value="utilities">Utilities</option>
+                    <option value="entertainment">Entertainment</option>
+                </select>
+                <button type="submit">Add Expense</button>
+            </form>
+            <div id="expenses-list">
+                <!-- Expenses will be listed here -->
+            </div>
+        </section>
+        <section id="financial-reporting">
+            <h2>Financial Reporting</h2>
+            <div id="report">
+                <!-- Financial report will be displayed here -->
+            </div>
+        </section>
+        <section id="alerts-recommendations">
+            <h2>Alerts & Recommendations</h2>
+            <div id="alerts">
+                <!-- Alerts will be displayed here -->
+            </div>
+        </section>
+        <section id="api-data">
+            <h2>API Data</h2>
+            <div id="api-result"></div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Personal Finance Manager</p>
+    </footer>
+    <script src="app.js"></script>
+    <script>
+        // Call the function to fetch data when the page loads
+        window.onload = fetchApiData;
+    </script>
+</body>
+</html>
